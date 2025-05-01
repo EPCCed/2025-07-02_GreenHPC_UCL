@@ -533,7 +533,7 @@ smallest?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may have come up with activities from the following list:</p>
 <ul>
@@ -694,7 +694,7 @@ from.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may have come up with sources such as:</p>
 <ul>
@@ -731,7 +731,7 @@ so it could be included in a carbon audit of your work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 <ul>
@@ -1493,7 +1493,7 @@ improved.</li>
         </div>
 <p>Refreshments break</p></section><section id="aio-carbon-awareness"><p>Content from <a href="carbon-awareness.html">Carbon Awareness</a></p>
 <hr>
-<p>Last updated on 2025-03-31 |
+<p>Last updated on 2025-05-01 |
 
         <a href="https://github.com/EPCCed/2025-05-13_GreenHPC_Online/edit/main/episodes/carbon-awareness.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -1912,6 +1912,14 @@ announced a project to make Windows 11 more sustainable</a>. Initially,
 this means running Windows updates when the carbon intensity is
 lower.</li>
 </ul>
+<div class="tip">
+<p>To be able to take advantage of temporal shifting on HPC systems
+typically requires support for such approaches in the configuration of
+the job scheduling system and or policies of the service you are using.
+While this is not widespread at the moment, more and more services are
+looking at ways to enable this. We will think about and mention concrete
+actions and approaches to this below.</p>
+</div>
 </div>
 </div>
 <div class="section level3">
@@ -2264,7 +2272,7 @@ carbon efficiency from HPC system use.</li>
 <p>Lunch break [Green software on HPC repository]: <a href="https://github.com/EPCCed/green-software-archer2" class="external-link uri">https://github.com/EPCCed/green-software-archer2</a> [open a
 lesson issue]: <a href="https://github.com/EPCCed/green-software-archer2/issues/new" class="external-link uri">https://github.com/EPCCed/green-software-archer2/issues/new</a></p></section><section id="aio-measurement"><p>Content from <a href="measurement.html">Measurement</a></p>
 <hr>
-<p>Last updated on 2025-04-01 |
+<p>Last updated on 2025-05-01 |
 
         <a href="https://github.com/EPCCed/2025-05-13_GreenHPC_Online/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -2513,7 +2521,7 @@ systems which can then be used to compute energy use.</p>
 <h3 class="callout-title">Heterogeneous systems</h3>
 <div class="callout-content">
 <p>The methodologies outlined below all assume the compute nodes are
-heterogeneous. What do you do if this is not the case and some nodes on
+homogeneous. What do you do if this is not the case and some nodes on
 the system have GPU and others do not, for example? In this case, you
 should try, as much as possible, to treat each homogeneous partition as
 its own smaller HPC system to help calculate energy use.</p>
