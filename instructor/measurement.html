@@ -365,7 +365,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-05-01 |
+        <p>Last updated on 2025-07-01 |
 
         <a href="https://github.com/EPCCed/2025-07-02_GreenHPC_UCL/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -897,15 +897,15 @@ ARCHER2 for estimating emissions.</p>
 <h3 class="callout-title">Exercise: Computing total emissions from HPC system use</h3>
 <div class="callout-content">
 <p>You are using (or running) a GPU-based HPC service and a particular
-project has used the following amounts of resource over 3 months</p>
-<ul><li>1,100 GPUh</li>
-<li>3,542,000 kWh</li>
+project has used the following amounts of resource:</p>
+<ul><li>120,000 GPUh</li>
+<li>72,000,000 kWh</li>
 </ul><p>The total embodied emissions for the service are 6,500,000
-kgCO<sub>2</sub>e, the service lifetime is 7 years and there are 1000
-compute nodes each with 8 GPU. The service is hosted in a location with
-a carbon intensity of 40 gCO<sub>2</sub>e/kWh.</p>
+kgCO<sub>2</sub>e, the service lifetime is 5 years and there are 1000
+compute nodes each with 4 GPU. The service is hosted in a location with
+a carbon intensity of 20 gCO<sub>2</sub>e/kWh.</p>
 <ol style="list-style-type: decimal"><li>Compute the scope 2 emissions for the project use</li>
-<li>Compute the scope 3 emissions rate in kgCO2e/GPUh</li>
+<li>Compute the scope 3 emissions rate in kgCO<sub>2</sub>e/GPUh</li>
 <li>Compute the scope 3 emissions for the project use</li>
 <li>Compute the total emissions for the project use</li>
 <li>Do scope 2 or scope 3 emissions dominate or are they evenly
@@ -923,22 +923,22 @@ matched?</li>
 <ol style="list-style-type: decimal"><li><p>The scope 2 emissions from energy use by the project are given by
 <code>E * I</code>, the energy used multiplied by the carbon intensity
 of the electricity supply. In this case, this is given by
-<code>3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e</code>.</p></li>
+<code>72,000,000 kWh x 0.020 kgCO2e/kWh = 1,440,000 kgCO2e</code>.</p></li>
 <li>
 <p>The scope 3 emissions rate per GPUh is the total scope 3
 emissions for the service divided by number of GPUh available over the
 lifetime of the service.</p>
 <ol style="list-style-type: decimal"><li>The total GPUh over the service lifetime is estimated by
-<code>7 years x 365 days x 24 hours x 1000 nodes x 8 GPU per node = 490,560,000 GPUh</code>.</li>
+<code>5 years x 365 days x 24 hours x 1000 nodes x 4 GPU per node = 4,204,800,000 GPUh</code>.</li>
 <li>The scope 3 emissions rate is given by
-<code>6,500,000 kgCO2e / 490,560,000 GPUh = 0.013 kgCO2e/GPUh</code>
+<code>6,500,000 kgCO2e / 490,560,000 GPUh = 0.0015 kgCO2e/GPUh</code>
 </li>
 </ol></li>
 <li><p>The scope 3 emissions for the project use is the number of GPUh
 used multiplied by the scope 3 emissions per GPUh:
-<code>1,100 GPUh * 0.013 kgCO2e/GPUh = 14.3 kgCO2e</code></p></li>
+<code>120,000 GPUh * 0.0015 kgCO2e/GPUh = 185.5 kgCO2e</code></p></li>
 <li><p>Total emissions are scope 2 + scope 3 emissions:
-<code>141,700 kgCO2e + 14.3 kgCO2e = 141,714 kgCO2e</code></p></li>
+<code>1,440,000 kgCO2e + 185.5 kgCO2e = 1,440,185.5 kgCO2e</code></p></li>
 <li><p>Scope 2 emissions (from electricity use) heavily dominate the
 emissions in this example.</p></li>
 </ol></div>
@@ -1182,8 +1182,8 @@ emissions.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/2025-07-02_GreenHPC_UCL/instructor/measurement.html",
   "identifier": "https://EPCCed.github.io/2025-07-02_GreenHPC_UCL/instructor/measurement.html",
-  "dateCreated": "2025-05-19",
-  "dateModified": "2025-05-01",
+  "dateCreated": "2025-07-01",
+  "dateModified": "2025-07-01",
   "datePublished": "2025-07-01"
 }
 
